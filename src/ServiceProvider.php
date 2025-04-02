@@ -65,8 +65,9 @@ class ServiceProvider extends AddonServiceProvider
          When the next version of Carbon is released, it should be set properly: https://github.com/briannesbitt/Carbon/issues/2539#issuecomment-1037257768
 
         */
-        Carbon::setWeekStartsAt(day: $weekStartDay);
-        Carbon::setWeekEndsAt(day: ($weekStartDay + 6) % 7);
+        // Setting carbon locale in v3 can determine week start/end.
+        // Carbon::setWeekStartsAt(day: $weekStartDay);
+        // Carbon::setWeekEndsAt(day: ($weekStartDay + 6) % 7);
 
         return $this;
     }
